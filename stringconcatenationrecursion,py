@@ -1,0 +1,16 @@
+# Define a recursive function to reverse a string
+def reverse(a):
+    # Base case: If the string has only 1 character, return it as it is
+    if len(a) == 1:
+        return a
+    else:
+        # Take the last character and add it to the result of reversing the rest
+        return a[-1] + reverse(a[:-1])  # a[-1] is the last character, a[:-1] is the string without the last character
+
+# Ask the user to input the text they want to reverse
+x = input("Enter the text that you want to be reversed: ")
+
+# Call the reverse function and store the result
+reversed_text = reverse(x)
+
+# Print the r
